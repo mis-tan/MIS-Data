@@ -8,8 +8,11 @@ SELECT
 	ti.ReferenceId , 
 	ti.[Search Name], 
 	tfdvs.GroupCategoryName,
+	tfdvs.GroupCategoryCode, 
 	tfdvs.CategoryName,
-	tfdvs.SubCategoryName 
+	tfdvs.CategoryCode, 
+	tfdvs.SubCategoryName,
+	tfdvs.SubCategoryCode 
 FROM D365FO_DATALAKE.dbo.inventsum as i 
 LEFT JOIN syndpdev001.dbo.tm_Item ti 
 LEFT JOIN syndpdev001.dbo.tm_FinDimValueSet tfdvs 
